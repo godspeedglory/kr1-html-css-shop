@@ -55,14 +55,6 @@ footer {
   padding: var(--space-lg);
 }
 
-
-header {
-  background-color: var(--color-surface);
-}
-
-footer {
-  background-color: var(--color-surface);
-}
 /* ===============================
    3. Общие элементы интерфейса
    =============================== */
@@ -80,59 +72,81 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/*
-  Ограничиваем ширину содержимого шапки,
-  чтобы оно не растягивалось слишком сильно на широких экранах.
-*/
+.button,
+.form-actions button {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.button:hover,
+.form-actions button:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+}
+
+.button:focus-visible,
+.form-actions button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.button:disabled,
+.form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   4. Компоненты страницы
+   =============================== */
+
+header {
+  background-color: var(--color-surface);
+}
+
+footer {
+  background-color: var(--color-surface);
+}
+
 .site-header {
-  max-width: 1100px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
-/*
-  Оформляем текстовый логотип.
-*/
 .site-logo {
   font-weight: bold;
   text-decoration: none;
-  color: #222222;
+  color: var(--color-text);
 }
 
-/*
-  Убираем стандартные отступы и маркеры списка навигации.
-*/
 .site-nav__list {
   padding: 0;
-  margin: 16px 0 0;
+  margin: var(--space-md) 0 0;
   list-style: none;
 }
 
-/*
-  Добавляем расстояние между пунктами меню.
-*/
 .site-nav__list li {
-  margin-bottom: 8px;
+  margin-bottom: var(--space-sm);
 }
 
-/*
-  Оформляем ссылки меню.
-*/
 .site-nav__list a {
-  color: #0057b8;
   text-decoration: none;
 }
 
-/*
-  При наведении мыши подчёркиваем ссылку.
-  Подробно состояния интерфейса будут рассмотрены в практической работе 1.7.
-*/
+.site-logo:hover {
+  color: var(--color-primary-dark);
+}
+
 .site-nav__list a:hover {
   text-decoration: underline;
 }
-/*
-  Hero-блок — первый крупный блок страницы.
-  Он визуально отделяется от остальных разделов фоном и отступами.
-*/
+
 .hero {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -150,10 +164,6 @@ a:focus-visible {
   margin-top: 0;
 }
 
-/*
-  Карточка товара — самостоятельный блок.
-  На следующих занятиях карточки будут доработаны и выстроены в сетку.
-*/
 .product-card {
   margin-bottom: var(--space-md);
   padding: var(--space-md);
@@ -170,34 +180,6 @@ a:focus-visible {
   margin-top: 0;
 }
 
-/*
-  Пока это обычная ссылка, но визуально она оформляется как кнопка.
-*/
-.button {
-  display: inline-block;
-  padding: var(--space-sm) var(--space-md);
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  text-decoration: none;
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: var(--color-primary-dark);
-}
-
-.button:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 3px;
-}
-
-.button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
 .aside-info {
   max-width: var(--container-width);
   margin: 0 auto var(--space-xl);
@@ -206,16 +188,12 @@ a:focus-visible {
   background-color: var(--color-surface);
 }
 
-/*
-  Модальное окно.
-  Элемент dialog сам умеет открываться поверх страницы.
-*/
 /* ===============================
    5. Форма и модальное окно
    =============================== */
 
 .order-dialog {
-  width: min(100% - 32px, 560px);
+  width: min(100% - var(--space-xl), 560px);
   padding: var(--space-lg);
   border: none;
   border-radius: var(--radius-lg);
@@ -260,30 +238,31 @@ a:focus-visible {
   border-color: var(--color-primary);
 }
 
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--color-primary);
+}
+
 .form-field input:focus-visible,
 .form-field select:focus-visible,
-.form-field textarea:focus-visible,
-.form-actions button:focus-visible {
+.form-field textarea:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
 
-[aria-invalid="true"] {
+.form-field input[aria-invalid="true"],
+.form-field select[aria-invalid="true"],
+.form-field textarea[aria-invalid="true"] {
   border-color: var(--color-danger);
 }
 
-/*
-  Кнопки формы.
-*/
 .form-actions {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
 }
 
-/*
-  Сообщение об успешной отправке.
-*/
 .success-message {
   max-width: var(--container-width);
   margin: var(--space-lg) auto;
