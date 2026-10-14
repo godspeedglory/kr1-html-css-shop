@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -61,17 +62,32 @@
             <legend class="catalog-filters__legend">Категория</legend>
 
             <label class="catalog-filters__label">
-              <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox" name="category" value="all">
+              <input
+                class="catalog-filters__input catalog-filters__input--checkbox"
+                type="checkbox"
+                name="category"
+                value="all"
+              >
               Все товары
             </label>
 
             <label class="catalog-filters__label">
-              <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox" name="category" value="popular">
+              <input
+                class="catalog-filters__input catalog-filters__input--checkbox"
+                type="checkbox"
+                name="category"
+                value="popular"
+              >
               Популярные
             </label>
 
             <label class="catalog-filters__label">
-              <input class="catalog-filters__input catalog-filters__input--checkbox" type="checkbox" name="category" value="new">
+              <input
+                class="catalog-filters__input catalog-filters__input--checkbox"
+                type="checkbox"
+                name="category"
+                value="new"
+              >
               Новинки
             </label>
           </fieldset>
@@ -80,13 +96,29 @@
             <legend class="catalog-filters__legend">Цена</legend>
 
             <label class="catalog-filters__label" for="price-from">От</label>
-            <input class="catalog-filters__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
+            <input
+              class="catalog-filters__input"
+              id="price-from"
+              name="price-from"
+              type="number"
+              min="0"
+              placeholder="0"
+            >
 
             <label class="catalog-filters__label" for="price-to">До</label>
-            <input class="catalog-filters__input" id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+            <input
+              class="catalog-filters__input"
+              id="price-to"
+              name="price-to"
+              type="number"
+              min="0"
+              placeholder="5000"
+            >
           </fieldset>
 
-          <button class="button button--primary" type="submit">Применить</button>
+          <button class="button button--primary" type="submit">
+            Применить
+          </button>
         </form>
       </aside>
 
@@ -94,36 +126,86 @@
         <h2 class="catalog-products__title">Список товаров</h2>
 
         <div class="products-grid">
-          <article class="product-card">
-            <h3 class="product-card__title">Товар 1</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 1000 руб.</p>
-            <a class="button button--primary" href="index.html#popular">Подробнее</a>
-          </article>
 
           <article class="product-card">
-            <h3 class="product-card__title">Товар 2</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
+            <h3 class="product-card__title">Тапочки миньоны</h3>
+
+            <img
+              class="product-card__image"
+              src="https://magicmag.net/image/cache/catalog/items/2976/tapochki-minon-7-1398x1398.jpg"
+              alt="Тапочки в виде миньонов"
+            >
+
+            <p class="product-card__description">
+              Мягкие, удобные и красивые тапочки в виде миньонов.
+              Наличие размеров уточнять у менеджера.
+            </p>
+
             <p class="product-card__price">Цена: 1500 руб.</p>
-            <a class="button button--primary" href="index.html#popular">Подробнее</a>
+
+            <a class="button button--primary" href="index.html#popular">
+              Подробнее
+            </a>
           </article>
 
           <article class="product-card">
-            <h3 class="product-card__title">Товар 3</h3>
-            <p class="product-card__description">Краткое описание учебного товара.</p>
-            <p class="product-card__price">Цена: 2000 руб.</p>
-            <a class="button button--primary" href="index.html#popular">Подробнее</a>
+            <h3 class="product-card__title">Кружка миньон</h3>
+
+            <img
+              class="product-card__image"
+              src="https://avatars.mds.yandex.net/i?id=903f95cbf3c972680121337d0cf85c90_l-5229226-images-thumbs&amp;n=13"
+              alt="Кружка с миньоном"
+            >
+
+            <p class="product-card__description">
+              Красивая и удобная кружка с изображением миньона.
+              Отличный подарок для любителей миньонов.
+            </p>
+
+            <p class="product-card__price">Цена: 700 руб.</p>
+
+            <a class="button button--primary" href="index.html#popular">
+              Подробнее
+            </a>
           </article>
+
+          <article class="product-card">
+            <h3 class="product-card__title">Игрушка миньон</h3>
+
+            <img
+              class="product-card__image"
+              src="https://basket-10.wbbasket.ru/vol1439/part143958/143958250/images/big/1.webp"
+              alt="Игрушка в виде миньона"
+            >
+
+            <p class="product-card__description">
+              Мягкая игрушка в виде любимого миньона.
+              Подойдет для подарка детям и взрослым.
+            </p>
+
+            <p class="product-card__price">Цена: 1000 руб.</p>
+
+            <a class="button button--primary" href="index.html#popular">
+              Подробнее
+            </a>
+          </article>
+
         </div>
       </section>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p class="site-footer__text">&copy; 2026 Учебный проект. Все права защищены.</p>
-    <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    <p class="site-footer__text">
+      &copy; 2026 Учебный проект. Все права защищены.
+    </p>
+    <p class="site-footer__text">
+      Дисциплина: Фронтенд и бэкенд разработка
+    </p>
   </footer>
 
-  <a class="back-to-top" href="#top" aria-label="Вернуться наверх">↑</a>
+  <a class="back-to-top" href="#top" aria-label="Вернуться наверх">
+    ↑
+  </a>
 </body>
 </html>

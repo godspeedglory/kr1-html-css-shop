@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -31,6 +32,9 @@
             <a class="site-nav__link" href="#popular">Популярные товары</a>
           </li>
           <li class="site-nav__item">
+            <a class="site-nav__link" href="reviews.html">Отзывы</a>
+          </li>
+          <li class="site-nav__item">
             <a class="site-nav__link" href="#contacts">Обратная связь</a>
           </li>
         </ul>
@@ -61,32 +65,121 @@
         <h2 class="products-grid__title">Популярные товары</h2>
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 1</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">1000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 1">
-            Заказать
-          </button>
-        </article>
+          <h3 class="product-card__title">Тапочки миньоны</h3>
 
-        <article class="product-card">
-          <h3 class="product-card__title">Товар 2</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
+          <img
+            class="product-card__image"
+            src="https://magicmag.net/image/cache/catalog/items/2976/tapochki-minon-7-1398x1398.jpg"
+            alt="Тапочки в виде миньонов"
+          >
+
+          <p class="product-card__description">
+            Мягкие, удобные и красивые тапочки в виде миньонов.
+            Наличие размеров уточнять у менеджера.
+          </p>
+
           <p class="product-card__price">1500 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 2">
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Тапочки миньоны"
+          >
             Заказать
           </button>
         </article>
 
         <article class="product-card">
-          <h3 class="product-card__title">Товар 3</h3>
-          <p class="product-card__description">Краткое описание учебного товара.</p>
-          <p class="product-card__price">2000 руб.</p>
-          <button class="button button--primary product-card__button" type="button" data-product="Товар 3">
+          <h3 class="product-card__title">Кружка миньон</h3>
+
+          <img
+            class="product-card__image"
+            src="https://avatars.mds.yandex.net/i?id=903f95cbf3c972680121337d0cf85c90_l-5229226-images-thumbs&amp;n=13"
+            alt="Кружка с миньоном"
+          >
+
+          <p class="product-card__description">
+            Красивая и удобная кружка с изображением миньона.
+            Отличный подарок для любителей миньонов.
+          </p>
+
+          <p class="product-card__price">700 руб.</p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Кружка миньон"
+          >
+            Заказать
+          </button>
+        </article>
+
+        <article class="product-card">
+          <h3 class="product-card__title">Игрушка миньон</h3>
+
+          <img
+            class="product-card__image"
+            src="https://basket-10.wbbasket.ru/vol1439/part143958/143958250/images/big/1.webp"
+            alt="Игрушка в виде миньона"
+          >
+
+          <p class="product-card__description">
+            Мягкая игрушка в виде любимого миньона.
+            Подойдет для подарка детям и взрослым.
+          </p>
+
+          <p class="product-card__price">1000 руб.</p>
+
+          <button
+            class="button button--primary product-card__button"
+            type="button"
+            data-product="Игрушка миньон"
+          >
             Заказать
           </button>
         </article>
       </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <h2 class="section__title">Отзывы покупателей</h2>
+
+      <div class="reviews__list">
+        <article class="reviews__card">
+          <h3 class="reviews__name">Елизавета добрая</h3>
+          <p class="reviews__rating">★★★★★</p>
+          <p class="reviews__product">Тапочки миньоны</p>
+          <p class="reviews__text">
+            Очень мягкие и удобные тапочки!
+            Выглядят точно как на фотографии.
+            Покупкой довольна! Мяу
+          </p>
+        </article>
+
+        <article class="reviews__card">
+          <h3 class="reviews__name">Оксана</h3>
+          <p class="reviews__rating">★★★★★</p>
+          <p class="reviews__product">Кружка миньон</p>
+          <p class="reviews__text">
+            Отличная кружка! Яркий рисунок,
+            удобная ручка. Теперь это моя любимая кружка. Мяу
+          </p>
+        </article>
+
+        <article class="reviews__card">
+          <h3 class="reviews__name">Елизавета кудрявая</h3>
+          <p class="reviews__rating">★★★★☆</p>
+          <p class="reviews__product">Игрушка миньон</p>
+          <p class="reviews__text">
+            Милая и приятная на ощупь игрушка.
+            Хорошее качество, отлично подошла для подарка. Гав
+          </p>
+        </article>
+      </div>
+
+      <a class="button button--primary reviews__button" href="reviews.html">
+        Написать свой отзыв
+      </a>
     </section>
 
     <aside class="aside-info">
@@ -109,13 +202,12 @@
     <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
       <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
 
-      
       <form class="order-form" id="order-form" action="#" method="post" novalidate>
         <input type="hidden" id="selected-product" name="product">
 
         <div class="order-form__field">
           <label class="order-form__label" for="order-name">Имя</label>
-          <input class="order-form__input" type="text" id="order-name" name="name"  placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
+          <input class="order-form__input" type="text" id="order-name" name="name" placeholder="Введите ваше имя" minlength="2" autocomplete="given-name" required>
         </div>
 
         <div class="order-form__field">
