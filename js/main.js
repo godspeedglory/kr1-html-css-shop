@@ -1,4 +1,5 @@
-// Получаем модальное окно по id.
+
+ // Получаем модальное окно по id.
 const orderDialog = document.getElementById('order-dialog');
 
 // Получаем все кнопки заказа в карточках товаров.
@@ -9,6 +10,16 @@ const closeDialogButton = document.getElementById('close-order-dialog');
 
 // Получаем скрытое поле, в которое будет записан выбранный товар.
 const selectedProductInput = document.getElementById('selected-product');
+
+// Получаем кнопку открытия формы обратной связи.
+const openDialogButton = document.querySelector('[data-open-order-dialog]:not(.product-card__button)');
+
+// Открываем модальное окно обратной связи.
+if (openDialogButton) {
+  openDialogButton.addEventListener('click', () => {
+    orderDialog.showModal();
+  });
+}
 
 // Перебираем все кнопки «Заказать».
 orderButtons.forEach((button) => {
@@ -28,6 +39,7 @@ orderButtons.forEach((button) => {
 closeDialogButton.addEventListener('click', () => {
   orderDialog.close();
 });
+
 // Получаем форму заявки.
 const orderForm = document.getElementById('order-form');
 

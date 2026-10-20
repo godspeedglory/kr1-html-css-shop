@@ -337,13 +337,18 @@ a:focus-visible {
   margin: 0 auto var(--space-xl);
 }
 
+
 .catalog-filters {
   grid-area: filters;
   padding: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: var(--color-surface);
+  position: sticky;
+  top: 100px;
+  align-self: start;
 }
+
 
 .catalog-filters__title {
   margin-top: 0;
@@ -555,3 +560,24 @@ a:focus-visible {
   }
 }
 
+.product-card__title {
+  min-height: 72px;
+}
+
+.product-card__image {
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.feedback {
+  padding: var(--space-lg);
+}
+
+.feedback__title {
+  margin-top: var(--space-xl);
+}
+
+.feedback__text {
+  color: var(--color-muted);
+  margin-bottom: var(--space-lg);
+}
